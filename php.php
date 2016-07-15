@@ -28,4 +28,22 @@
 		$last = "flip";
 	}
 	print "There {$verb} {$flipCount} {$last}!";
+
+// FizzBuzz php style! woo!!
+function fizzbuzz($until){
+	$return_array = array();
+	for ($i = 1; $i <= $until; $i++)
+	{
+	    if (!($i % 15))
+	        array_push($return_array, "FizzBuzz");
+	    else if (!($i % 3))
+	        array_push($return_array, "Fizz");
+	    else if (!($i % 5))
+	        array_push($return_array, "Buzz");
+	    else
+	        array_push($return_array, "$i");
+	}
+	return $return_array;
+}
+echo implode("\n", fizzbuzz(100));
 ?>
